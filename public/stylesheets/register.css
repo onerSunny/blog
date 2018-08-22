@@ -1,0 +1,106 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body{
+	background: url('../images/index-11.jpg') no-repeat;
+	background-size: 100%;
+}
+.box{
+	width: 320px;
+	background: rgba(0, 0, 0, 0.7);
+	margin: 150px auto;
+	padding: 30px;
+}
+.box h2{
+	font-size: 20px;
+	margin-bottom: 20px;
+	color: white;
+}
+.box .top,.box .bottom{
+	width: 100%;
+	height: 35px;
+	color: white;
+	box-sizing: border-box; 
+	display: flex;
+}
+.box .top span,.box .bottom span{
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	background: white;
+	border-right: 1px solid #dae9ef;
+}
+.box .top span i,.box .bottom span i{
+	font-size: 20px;
+	color: #cc3232;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-weight: bold;
+}
+.box input{
+	height: 35px;
+	border: none;
+	padding-left: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+	flex-grow: 1;
+}
+.box .tips1,.box .tips2,.box .tips3,.box .tips4
+,.box .tips5,.box .tips6,.box .tips7{
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+	color: red;
+	font-size: 14px;
+	display: none;
+}
+.box .tips4,.box .tips7{
+	color: white;
+	text-align: center;
+	font-size: 15px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.box .tips5 a{
+	color: white;
+}
+.box .tips5 a:hover{
+	color: #7aa4be;
+}
+.box .bottom,.box .register,.box .login{
+	margin-top: 20px;
+}
+.box .register,.box .login{
+	width: 100%;
+	height: 35px;
+	text-align: center;
+	display: flex;
+}
+.box .register span,.box .login span{
+	color: white;
+	background: #7aa4be;
+	font-size: 16px;
+	font-weight: bold;
+	display: inline-block;
+	width: 49%;
+	height: 35px;
+	line-height: 35px;
+	cursor: pointer;
+	float: left;
+}
+.box .register .span1,.box .login .span1{
+	margin-right: 2%;
+}
+@media (max-width: 668px) {
+	.box{
+		width: 270px;
+		margin: 212px auto;
+	}
+	body{
+		background: url('../images/index-11.jpg') repeat;
+		background-size: 100%;
+	}
+}
+

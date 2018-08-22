@@ -1,0 +1,170 @@
+nav .nav_c ul li a{
+	text-decoration: none;
+	color: #bdbdbd;
+}
+nav .nav_c ul li a:hover{
+	color: white;
+}
+.life_pic{
+	height: 200px;
+	background: url('../images/life-1.jpg') no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+section .container{
+	display: flex;
+	margin-top: 20px;
+}
+section .life_l{
+	width: 70%;
+	margin-right: 20px;
+}
+section .life_cons .life_title{
+	height: 40px;
+	border-bottom: 1px solid #bfbfbf;
+	font-weight: bold;
+}
+section .life_cons .life_title span{
+	display: inline-block;
+	padding: 10px 20px;
+	background: #3a6ab5;
+	color: white;
+	font-size: 14px;
+	float: left;
+	cursor: pointer;
+}
+section .life_cons .life_title span:hover{
+	background: #18468e;
+}
+section .life_cons .life_title span a{
+	text-decoration: none;
+	color: white;
+}
+section .life_cons .life_title p{
+	line-height: 40px;
+	color: #555;
+	text-align: right;
+}
+section .life_cons .life_title p i{
+	font-size: 16px;
+	color: #d86f8d;
+	margin-right: 5px;
+}
+section .life_c{
+	margin-top: 20px;
+	background: white;
+}
+section .life_c p{
+	font-size: 16px;
+	color: #dd6f8d;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+section .life_c p i{
+	font-size: 20px;
+	color: #d86f8d;
+	font-weight: bold;
+}
+section .life_c ul{
+	display: flex;
+}
+section .life_c ul li{
+	width: 33.3%;
+	border-radius: 10%;
+	text-align: center;
+	padding-bottom: 20px;
+}
+section .life_c ul li img{
+	width: 150px;
+	height: 120px;
+	border-radius: 50%;
+}
+section .life_cons .title2,.title3{
+	margin-top: 50px;
+}
+section .life_p{
+	width: 100%;
+	height: 350px;
+	overflow: hidden;
+	border-radius: 30px;
+}
+section .life_p img{
+	width: 100%;
+	margin: 20px auto;
+	border-radius: 30px;
+}
+section .life_c2 p{
+	margin-top: 10px;
+	font-size: 15px;
+	color: #555;
+}
+section .life_c3{
+	width: 100%;
+	display: flex;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background: white;
+}
+section .life_c3 li{
+	width: 33.3%;
+	margin-right: 5px;
+	text-align: center;
+	overflow: hidden;
+}
+section .life_c3 li img{
+	width: 100%;
+	height: 150px;
+	margin-top: 10px;
+	overflow: hidden;
+}
+section .life_c3 li p{
+	font-size: 15px;
+	margin-top: 10px;
+}
+@media (max-width: 991px) {
+	section .life_l{
+		width: 100%;	
+	}	
+	footer{
+		height: 50px;
+		line-height: 50px;
+	}
+}
+
+@media (max-width: 668px) {
+	section .container{
+		margin-left: 5px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	section .life_c ul li{
+		overflow: hidden
+	}
+	section .life_c ul li img{
+		width: 90px;
+		height: 70px;
+	}
+	section .life_cons .title2, .title3{
+		margin-top: 20px;
+	}
+	section .life_l{
+		margin-right: 5px;
+	}
+	section .life_c{
+		margin-top: 10px;
+	}
+	section .life_p{
+		height: 245px;
+	}
+	section .life_p img{
+		margin: 10px auto;
+	}
+	section .life_c3{
+		margin: 10px auto;
+	}
+	section .life_c3 li img{
+		height: 100px;
+	}
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>life慢生活</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/stylesheets/index.css">
+	<link rel="stylesheet" href="/stylesheets/life.css">
+	<link rel="stylesheet" href="/icon/font_1v3os0m7046/iconfont.css">
+	<style></style>
+</head>
+<body>
+	<!-- nav -->
+	<nav>
+		<div class="container">
+			<div class="pull-left nav_l col-md-3 col-sm-6">
+				<h1>onerSunny博客</h1>
+			</div>
+			<div class="nav_r col-md-2 col-sm-6">
+				<div class="nav_r2">
+					<span class="span1"></span>
+					<span class="span2"></span>
+					<span class="span3"></span>
+				</div>
+				<div class="nav_r1">
+					<span>
+					    <i class="iconfont icon-login"></i>
+					    <a href="/showLogin">登录</a>
+					</span>
+					<span>
+					    <i class="iconfont icon-register_"></i>
+					    <a href="/showRegister">注册</a>
+					</span>
+				</div>
+			</div>
+			<div class="nav_c col-md-7 col-sm-12">
+				<ul>
+					<li><a href="/">首页</a></li>
+					<li class="nav_c_study nav_down">学无止境
+						<ol class="study">
+							<li>心得笔记</li>
+							<li>CSS3/HTML5</li>
+							<li>javascript/jquery</li>
+						</ol>
+					</li>
+					<li class="nav_c_life  nav_down current">慢生活
+						<ol class="life">
+							<li>爱美食</li>
+							<li>旅行路上</li>
+							<li>安静美女子</li>
+						</ol>
+					</li>
+					<li>
+						<a href="/about_me">关于我</a>
+					</li>
+					<li>
+						<a href="/article">发表文章</a>
+					</li>
+					<li>
+						<a href="/message_board">留言板</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- pic -->
+	<div class="life_pic"></div>
+	<!-- content  -->
+	<section>
+		<div class="container">
+			<div class="life_l">
+				<!-- life_con 1-->
+				<div class="life_cons">
+					<div class="life_title">
+							<span>
+								<a href="/travel">爱美食</a>
+							</span>
+							<p><i class="iconfont icon-shuqian"></i>吃货的路上从未停止过...</p>
+					</div>
+
+					<% for(i=0;i<2;i++){ %>
+						<div class="life_c">
+							<p>
+								<i class="iconfont icon-biaoqing-copy"></i>
+								<%= title[i].title1 %>
+							</p>
+							<ul>
+								<% for(j=0;j<3;j++){ %>
+									<li>
+										<img src="<%= title[i].pic1[j] %>" alt="">
+									</li>
+								<% } %>
+							</ul>
+						</div>
+					<% } %>
+
+				<!-- life_con 2-->
+				<div class="life_cons">
+					<div class="life_title title2">
+						<span>
+							<a href="/travel">旅行路上</a>
+						</span>
+						<p><i class="iconfont icon-shuqian"></i>
+						忽晴忽雨的江湖，祝你有梦为马...</p>
+					</div>
+					<div class="life_c2">
+						<div class="life_p">
+							<img src="../images/life-8.jpg" alt="">
+						</div>
+						<p>请相信，这个世界上真的有人过着你想要的生活，愿你我既可以早九晚五，又能浪迹天涯。忽晴忽雨的江湖，祝你有梦为马，随处可栖...</p>
+					</div>
+				</div>
+
+				<!-- life_con 3-->
+				<div class="life_cons">
+					<div class="life_title title3">
+						<span>
+							<a href="/travel">安静美女子</a>
+						</span>
+						<p><i class="iconfont icon-shuqian"></i>做你想做的事情，过你想要的生活...</p>
+					</div>
+						<% for(i=2;i<4;i++){ %>
+							<ul class="life_c3">
+								<% for(j=0;j<3;j++){ %>
+								<li>
+									<img src="<%= title[i].pic2[j] %>" alt="">
+									<p><%= title[i].p2[j] %></p>
+								</li>
+								<% } %>
+							</ul>
+						<% } %>
+					</div>
+				</div> 
+			</div>
+
+			<div class="con_r">
+				<div class="con_r_con">
+					<h3>特别推荐</h3>
+					<div class="hr"></div>
+					<ul class="recommend">
+						<li>
+							<img src="../images/index-13.jpg" alt="">
+							<div class="bg">
+								<div class="rec">
+									<p>帝国cms调用方法</p>
+									<span>阅读</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<img src="../images/index-12.jpg" alt="">
+							<div class="bg">
+								<div class="rec">
+									<p>5.20我想对你说</p>
+									<span>阅读</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<img src="../images/index-14.jpg" alt="">
+							<div class="bg">
+								<div class="rec">
+									<p>属于我的小世界</p>
+									<span>阅读</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="con_r_con">
+					<h3>标签云</h3>
+					<div class="hr"></div>
+					<ul class="res">
+						<li class="li1">陌上花开</li>
+						<li class="li2">校园生活</li>
+						<li class="li3">青春</li>
+						<li class="li4">SumSung</li>
+						<li class="li5">html5</li>
+						<li class="li6">温暖</li>
+						<li class="li7">铃铛</li>
+						<li class="li8">江湖</li>
+						<li class="li9">阳光</li>
+						<li class="li10">七月上</li>
+						<li class="li11">oner</li>
+						<li class="li12">从前慢</li>
+					</ul>
+				</div>
+				<div class="con_r_con">
+					<h3>关注我们</h3>
+					<div class="hr"></div>
+					<ul class="atten">
+						<li class="li1">
+							<i class="iconfont icon-iconfontweibo"></i>
+							<span class="sp1">宣尹微博</span>
+							<span class="sp2">新浪微博</span>
+						</li>
+						<li class="li2">
+							<i class="iconfont icon-tengxunweibo"></i>
+							<span class="sp1">宣尹微博</span>
+							<span class="sp2">腾讯微博</span>
+						</li>
+						<li class="li3">
+							<i class="iconfont icon-qq"></i>
+							<span class="sp1">945415240</span>
+							<span class="sp2">QQ号</span>
+						</li>
+						<li class="li4">
+							<i class="iconfont icon-youxiang"></i>
+							<span class="sp1">13414853037@163.com</span>
+							<span class="sp2">邮箱账号</span>
+						</li>
+						<li class="li5">
+							<i class="iconfont icon-weixin"></i>
+							<span class="sp1">wxy945415240</span>
+							<span class="sp2">微信号</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section> 
+
+	<!-- footer -->
+	<footer>
+		<p>Design by 
+			<span>onerSunny个人微博</span>
+			<span>粤ICP备11002363号-1</span>
+		</p>
+	</footer>
+
+	<script src='/javascripts/jquery.min.js'></script>
+	<script src='/javascripts/bootstrap.min.js'></script>
+	<script src='/javascripts/index.js'></script>
+	<script src='/javascripts/life.js'></script>
+</body>
+</html>

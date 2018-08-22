@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>index首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="/icon/font_1v3os0m7046/iconfont.css">
+    <link rel="stylesheet" href="/icon/font_wmd6w75pc4g/iconfont.css">
+</head>
+<body>
+    <!-- nav -->
+    <nav>
+        <div class="container">
+            <div class="pull-left nav_l col-md-3 col-sm-6">
+                <h1>onerSunny博客</h1>
+            </div>
+            <div class="nav_r col-md-2 col-sm-6">
+                <div class="nav_r2">
+                    <span class="span1"></span>
+                    <span class="span2"></span>
+                    <span class="span3"></span>
+                </div>
+                <div class="nav_r1">
+                    <span>
+                        <i class="iconfont icon-login"></i>
+                        <a href="/showLogin">登录</a>
+                    </span>
+                    <span>
+                        <i class="iconfont icon-register_"></i>
+                        <a href="/showRegister">注册</a>
+                    </span>
+                </div>
+            </div>
+            <div class="nav_c col-md-7 col-sm-12">
+                <ul>
+                    <li class="current">首页</li>
+                    <li class="nav_c_study nav_down">学无止境
+                        <ol class="study">
+                            <li>心得笔记</li>
+                            <li>CSS3/HTML5</li>
+                            <li>javascript/jquery</li>
+                        </ol>
+                    </li>
+                    <li class="nav_c_life  nav_down">
+                        <a href="/life">慢生活</a>
+                        <ol class="life">
+                            <li>爱美食</li>
+                            <li>旅行路上</li>
+                            <li>安静美女子</li>
+                        </ol>
+                    </li>
+                    <li class="nav_c_about">
+                        <a href="/about_me">关于我</a>
+                    </li>
+                    <li>
+                        <a href="/article">发表文章</a>
+                    </li>
+                    <li class="nav_c_message">
+                        <a href="/message_board">留言板</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- show -->
+    <div class="show">
+        <div class="container">
+            <div class="show_l col-md-8 col-xs-12">
+                <ul id="ul_con">
+                    <li class="li_con">
+                        <img class="img1" alt="" src="images/index-1.jpg">
+                        <div class="title">
+                            <h2>别让这些闹心的套路，毁了你的网页设计！</h2>
+                        </div>
+                    </li>
+                    <li class="li_con">
+                        <img class="img2" alt="" src="images/index-10.jpg">
+                        <div class="title">
+                            <h2>网页中图片属性固定宽度，如何用js改变大小</h2>
+                        </div>
+                    </li>
+                    <li class="li_con">
+                        <img class="img3" alt="" src="images/index-11.jpg">
+                        <div class="title">
+                            <h2>个人博客，属于我的小世界！</h2>
+                        </div>
+                    </li>
+                </ul>
+                <ol id="ol_con">
+                    <li class="ol_current"></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+                <span class="left">
+                    <i class="iconfont icon-left"></i>
+                </span>
+                <span class="right">
+                    <i class="iconfont icon-right"></i>
+                </span>
+            </div>
+
+            <div class="show_r col-md-4">
+                <div class="top">
+                    <img src="images/index-4.jpg" alt="">
+                    <span>学无止境</span>
+                    <div class="top_con">
+                        <p>别让这些闹心的套路，毁了你的网页设计!</p>
+                    </div>
+                    <div class="top_top"></div>
+                </div>
+                <div class="bottom">
+                    <img src="images/index-2.jpg" alt="">
+                    <span>享受生活</span>
+                    <div class="top_con">
+                        <p>个人博客，属于我的小世界！</p>
+                    </div>
+                    <div class="top_top"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- con -->
+    <div class="con">
+        <div class="container">
+            <div class="con_l">
+
+                <!-- col_l 1 -->
+                <% for(i=0;i<title.length;i++){ %>
+                    <div class="con_l_con">
+                        <div class="pic">
+                            <img src="<%= title[i].pic1 %>" alt="">
+                        </div>
+                        <div class="cons">
+                            <h2><%= title[i].title1 %></h2>
+                            <div class="cons_m">
+                                <p><%= title[i].con1 %></p>
+                            </div>
+                            <div class="cons_b">
+                                <span>
+                                    <i class="iconfont icon-people i1"></i><%= title[i].i1 %>
+                                </span>
+                                <span>
+                                    <i class="iconfont icon-aui-icon-paper i2"></i><%= title[i].i2 %>
+                                </span>
+                                <span>
+                                    <i class="iconfont icon-shizhong i3"></i><%= title[i].i3 %>
+                                </span>
+                                <span>
+                                    <i class="iconfont icon-yanjing i4"></i><%= title[i].i4 %>
+                                </span>
+                                <span>
+                                    <i class="iconfont icon-aixin i5"></i><%= title[i].i5 %>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+
+            <div class="con_r">
+                <div class="con_r_con">
+                    <h3>特别推荐</h3>
+                    <div class="hr"></div>
+                    <ul class="recommend">
+                        <li>
+                            <img src="images/index-13.jpg" alt="">
+                            <div class="bg">
+                                <div class="rec">
+                                    <p>帝国cms调用方法</p>
+                                    <span>阅读</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/index-12.jpg" alt="">
+                            <div class="bg">
+                                <div class="rec">
+                                    <p>5.20我想对你说</p>
+                                    <span>阅读</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/index-14.jpg" alt="">
+                            <div class="bg">
+                                <div class="rec">
+                                    <p>属于我的小世界</p>
+                                    <span>阅读</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="con_r_con">
+                    <h3>标签云</h3>
+                    <div class="hr"></div>
+                    <ul class="res">
+                        <li class="li1">陌上花开</li>
+                        <li class="li2">校园生活</li>
+                        <li class="li3">青春</li>
+                        <li class="li4">SumSung</li>
+                        <li class="li5">html5</li>
+                        <li class="li6">温暖</li>
+                        <li class="li7">铃铛</li>
+                        <li class="li8">江湖</li>
+                        <li class="li9">阳光</li>
+                        <li class="li10">七月上</li>
+                        <li class="li11">oner</li>
+                        <li class="li12">从前慢</li>
+                    </ul>
+                </div>
+                <div class="con_r_con">
+                    <h3>关注我们</h3>
+                    <div class="hr"></div>
+                    <ul class="atten">
+                        <li class="li1">
+                            <i class="iconfont icon-iconfontweibo"></i>
+                            <span class="sp1">宣尹微博</span>
+                            <span class="sp2">新浪微博</span>
+                        </li>
+                        <li class="li2">
+                            <i class="iconfont icon-tengxunweibo"></i>
+                            <span class="sp1">宣尹微博</span>
+                            <span class="sp2">腾讯微博</span>
+                        </li>
+                        <li class="li3">
+                            <i class="iconfont icon-qq"></i>
+                            <span class="sp1">945415240</span>
+                            <span class="sp2">QQ号</span>
+                        </li>
+                        <li class="li4">
+                            <i class="iconfont icon-youxiang"></i>
+                            <span class="sp1">13414853037@163.com</span>
+                            <span class="sp2">邮箱账号</span>
+                        </li>
+                        <li class="li5">
+                            <i class="iconfont icon-weixin"></i>
+                            <span class="sp1">wxy945415240</span>
+                            <span class="sp2">微信号</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <p>Design by 
+            <span>onerSunny个人微博</span>
+            <span>粤ICP备11002363号-1</span>
+        </p>
+    </footer>
+  
+
+    <script src='/javascripts/jquery.min.js'></script>
+    <script src='/javascripts/bootstrap.min.js'></script>
+    <script src='/javascripts/index.js'></script>
+</body>
+</html>
+

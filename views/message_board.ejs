@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>message_board留言板</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" href="/icon/font_1v3os0m7046/iconfont.css">
+	<link rel="stylesheet" href="/stylesheets/message_board.css">
+	<style></style>
+</head>
+<body>
+	<!-- nav -->
+	<nav>
+		<div class="container">
+			<div class="pull-left nav_l col-md-3 col-sm-6">
+				<h1>onerSunny博客</h1>
+			</div>
+			<div class="nav_r col-md-2 col-sm-6">
+				<div class="nav_r2">
+					<span class="span1"></span>
+					<span class="span2"></span>
+					<span class="span3"></span>
+				</div>
+				<div class="nav_r1">
+					<span>
+                        <i class="iconfont icon-login"></i>
+                        <a href="/showLogin">登录</a>
+                    </span>
+                    <span>
+                        <i class="iconfont icon-register_"></i>
+                        <a href="/showRegister">注册</a>
+                    </span>
+				</div>
+			</div>
+			<div class="nav_c col-md-7 col-sm-12">
+				<ul>
+					<li><a href="/">首页</a></li>
+					<li>学无止境</li>
+					<li>
+						<a href="/life">慢生活</a>
+					</li>
+					<li>
+						<a href="/about_me">关于我</a>
+					</li>
+					<li>
+						<a href="/article">发表文章</a>
+					</li>
+					<li class="current">
+						<a href="/message_board">留言板</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- content -->
+	<div class="content">
+		<div class="container">
+			<!-- left -->
+			<div class="left">
+				<textarea name="" id="" class="tex" placeholder="来说两句吧..."></textarea>
+				<div class="sure">
+					<div class="s_right">
+						<a class="sub">畅言一下</a>
+					</div>
+				</div>
+				<% for(i=title.length-1;i>-1;i--) { %>
+					<div class="com">
+						<span class="cid"><%= title[i]._id%></span>
+						<span class="cons"><%= title[i].con %></span>
+						<span onclick="del(this)" class="del">X</span>
+					</div>
+				<% } %>
+			</div>
+
+			<!-- right -->
+			<div class="right">
+				<div class="cons">
+					<div class="r_con">
+						<span>关于我</span>
+						<div class="r_pic">
+							<img src="images/me.jpg" alt="">
+						</div>
+						<p>网名：onerSunny | 岁月静好</p>
+						<p>职业：Web前端设计师、网页设计</p>
+						<p>爱好：K歌、旅行、看书</p>
+						<p>人生格言：岁月静好，活在当下</p>
+					</div>
+				</div>
+				
+				<div class="cons">
+					<div class="r_con">
+						<span>最新推荐</span>
+						<ul>
+							<li>
+								<i class="i1">1</i>
+								<span>什么是网站权重</span>
+							</li>
+							<li>
+								<i class="i2">2</i>
+								<span>前端MVVM框架之“Vue.js组件篇”</span>
+							</li>
+							<li>
+								<i class="i2">3</i>
+								<span>送给那些想学习网页制作的朋友们一些话</span>
+							</li>
+							<li>
+								<i>4</i>
+								<span>web前端--网页制作细节的处理</span>
+							</li>
+							<li>
+								<i>5</i>
+								<span>说说我们的网站后台系统</span>
+							</li>
+							<li>
+								<i>6</i>
+								<span>网页制作基础教程（二）html标签</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer -->
+	<footer>
+		<p>Design by 
+			<span>onerSunny个人微博</span>
+			<span>粤ICP备11002363号-1</span>
+		</p>
+	</footer>
+
+	<script src='/javascripts/jquery.min.js'></script>
+	<script src='/javascripts/bootstrap.min.js'></script>
+	<script src='/javascripts/message_board.js'></script>
+</body>
+</html>

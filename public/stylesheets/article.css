@@ -1,0 +1,91 @@
+
+/* section */
+.content .container{
+	margin-top: 20px;
+	overflow: hidden;
+}
+.content .left{
+	width: 70%;
+	float: left;
+	padding: 0px 20px 20px;
+	background: white;
+	border-radius: 10px;
+}
+.content .left form{
+	padding-bottom: 50px;
+	position: relative;
+}
+.content .left form h2{
+	font-size: 18px;
+	font-weight: bold;
+	color: #00a7eb;
+}
+.content .left form .form_h2{
+	margin-top: 30px;
+}
+.content .left input,.content .left textarea{
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #9a9a9a;
+}
+.content .left input{
+	height: 35px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.content .left textarea{
+	height:400px;
+	font-size: 14px;
+}
+.content .left .btn1,.content .left .btn2{
+	padding: 5px 15px;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	border: none;
+	background: #3a6ab5;
+}
+.content .left .btn1{
+	margin-top: 20px;
+}
+.content .left .btn1 a{
+	color: white;
+	text-decoration: none;
+}
+.content .left .btn1:hover,.content .left .btn2:hover{
+	background: #18468e;
+}
+.content .left .btn2{
+	background: #3a6ab5;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+
+
+@media (max-width: 991px) {
+	.content .left{
+		width: 100%;
+	}
+	.content .right{
+		display: none;
+	}
+	footer{
+		height: 50px;
+		line-height: 50px;
+	}
+}
+
+@media (max-width: 668px) {
+	.content .container{
+		padding: 5px;
+		margin-top: 10px;
+	}
+	.content .left{
+		padding: 0px 5px 10px;
+	}
+	.content .left form h2{
+		font-size: 18px;
+	}
+}
+

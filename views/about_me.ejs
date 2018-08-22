@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>about_me关于我</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" href="/stylesheets/index.css">
+	<link rel="stylesheet" href="/icon/font_1v3os0m7046/iconfont.css">
+	<link rel="stylesheet" href="/stylesheets/about_me.css">
+</head>
+<body>
+	<!-- nav -->
+	<nav>
+		<div class="container">
+			<div class="pull-left nav_l col-md-3 col-sm-6">
+				<h1>onerSunny博客</h1>
+			</div>
+			<div class="nav_r col-md-2 col-sm-6">
+				<div class="nav_r2">
+					<span class="span1"></span>
+					<span class="span2"></span>
+					<span class="span3"></span>
+				</div>
+				<div class="nav_r1">
+					<span>
+                        <i class="iconfont icon-login"></i>
+                        <a href="/showLogin">登录</a>
+                    </span>
+                    <span>
+                        <i class="iconfont icon-register_"></i>
+                        <a href="/showRegister">注册</a>
+                    </span>
+				</div>
+			</div>
+			<div class="nav_c col-md-7 col-sm-12">
+				<ul>
+					<li><a href="/">首页</a></li>
+					<li>学无止境</li>
+					<li>
+						<a href="/life">慢生活</a>
+					</li>
+					<li class="current">
+						<a href="/about_me">关于我</a>
+					</li>
+					<li>
+						<a href="/article">发表文章</a>
+					</li>
+					<li>
+						<a href="/message_board">留言板</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- section -->
+	<section>
+		<div class="container">
+			<!-- left -->
+			<div class="left">
+				<form action="/addAbout" class="cons" method="post">
+					<h2>*&nbsp;基本信息</h2>
+
+					昵称：<input type="text" value="<%=uname%>" class="name"><br>
+
+					性别：<input type="radio" value="man" class="rad" name="inf_sex">男&nbsp;&nbsp;&nbsp;
+					<input type="radio" value="woman" class="rad" name="inf_sex">女&nbsp;&nbsp;&nbsp;
+					<input type="radio" value="secrecy" class="rad" name="inf_sex">保密<br>
+
+					头像：<br><input type="image" src="/images/index-1.jpg" class="pic" name="inf_pic"><br>
+
+					<h2>*&nbsp;个人信息</h2>
+
+					出生日期：<select id="date" name="inf_year" class="year">
+						<option value="1990">1990</option>
+						<option value="1991">1991</option>
+						<option value="1992">1992</option>
+						<option value="1993">1993</option>
+						<option value="1994">1994</option>
+						<option value="1995">1995</option>
+						<option value="1996">1996</option>
+						<option value="1997">1997</option>
+						<option value="1998">1998</option>
+						<option value="1999">1999</option>
+						<option value="2000">2000</option>
+					</select>
+					<select id="date" name="inf_month" class="month">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+					</select>
+					<select id="date" name="inf_day" class="day">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="24">24</option>
+						<option value="25">25</option>
+						<option value="26">26</option>
+						<option value="27">27</option>
+						<option value="28">28</option>
+						<option value="29">29</option>
+						<option value="30">30</option>
+						<option value="31">31</option>
+					</select><br>
+
+					从事职业：<input type="text" name="inf_job" value="<%= title[0].inf_job %>"><br>
+
+					兴趣爱好：<input type="checkbox" value="sing" class="hob h1" name="inf_hobby">K歌&nbsp;&nbsp;&nbsp;
+					<input type="checkbox" value="sport" class="hob h2" name="inf_hobby">运动&nbsp;&nbsp;&nbsp;
+					<input type="checkbox" value="travel" class="hob h3" name="inf_hobby">旅行&nbsp;&nbsp;&nbsp;
+					<input type="checkbox" value="read" class="hob h4" name="inf_hobby">阅读&nbsp;&nbsp;&nbsp;<br>
+					
+					手机号码：<input type="text" name="inf_phone" value="<%= title[0].inf_phone %>"><br>
+					电子邮件：<input type="text" name="inf_email" value="<%= title[0].inf_email %>"><br>
+					个性签名：<textarea id="" rows="3" name="inf_motto"><%= title[0].inf_motto %></textarea><br>
+					<input type="submit" class="sure" value="确认修改">
+				</form>
+			</div>
+
+			<!-- right -->
+			<div class="con_r">
+				<div class="con_r_con">
+					<h3>标签云</h3>
+					<div class="hr"></div>
+					<ul class="res">
+						<li class="li1">陌上花开</li>
+						<li class="li2">校园生活</li>
+						<li class="li3">青春</li>
+						<li class="li4">SumSung</li>
+						<li class="li5">html5</li>
+						<li class="li6">温暖</li>
+						<li class="li7">铃铛</li>
+						<li class="li8">江湖</li>
+						<li class="li9">阳光</li>
+						<li class="li10">七月上</li>
+						<li class="li11">oner</li>
+						<li class="li12">从前慢</li>
+					</ul>
+				</div>
+				<div class="con_r_con">
+					<h3>关注我们</h3>
+					<div class="hr"></div>
+					<ul class="atten">
+						<li class="li1">
+							<i class="iconfont icon-iconfontweibo"></i>
+							<span class="sp1">宣尹微博</span>
+							<span class="sp2">新浪微博</span>
+						</li>
+						<li class="li2">
+							<i class="iconfont icon-tengxunweibo"></i>
+							<span class="sp1">宣尹微博</span>
+							<span class="sp2">腾讯微博</span>
+						</li>
+						<li class="li3">
+							<i class="iconfont icon-qq"></i>
+							<span class="sp1">945415240</span>
+							<span class="sp2">QQ号</span>
+						</li>
+						<li class="li4">
+							<i class="iconfont icon-youxiang"></i>
+							<span class="sp1">13414853037@163.com</span>
+							<span class="sp2">邮箱账号</span>
+						</li>
+						<li class="li5">
+							<i class="iconfont icon-weixin"></i>
+							<span class="sp1">wxy945415240</span>
+							<span class="sp2">微信号</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- footer -->
+	<footer>
+		<p>Design by 
+			<span>onerSunny个人微博</span>
+			<span>粤ICP备11002363号-1</span>
+		</p>
+	</footer>
+
+	<script src='/javascripts/jquery.min.js'></script>
+	<script src='/javascripts/bootstrap.min.js'></script>
+	<script src='/javascripts/index.js'></script>
+	<script>
+		// 性别
+		if('<%= title[0].inf_sex %>'=='man'){
+			$('input[name="inf_sex"]')[0].checked=true;
+			$('input[name="inf_sex"]')[1].checked=false;
+			$('input[name="inf_sex"]')[2].checked=false;
+		}else if('<%= title[0].inf_sex %>'=='woman'){
+			$('input[name="inf_sex"]')[0].checked=false;
+			$('input[name="inf_sex"]')[1].checked=true;
+			$('input[name="inf_sex"]')[2].checked=false;
+		}else{
+			$('input[name="inf_sex"]')[0].checked=false;
+			$('input[name="inf_sex"]')[1].checked=false;
+			$('input[name="inf_sex"]')[2].checked=true;
+		}
+
+		// 出生日期
+		var str1='<%= title[0].inf_year %>'
+		for(i=0;i<$('.year>option').length;i++){
+			if($('.year>option')[i].value==str1){
+				$('.year>option')[i].selected=true;
+			}
+		}
+		var str2='<%= title[0].inf_month %>'
+		for(i=0;i<$('.month>option').length;i++){
+			if($('.month>option')[i].value==str2){
+				$('.month>option')[i].selected=true;
+			}
+		}
+		var str3='<%= title[0].inf_day %>'
+		for(i=0;i<$('.day>option').length;i++){
+			if($('.day>option')[i].value==str3){
+				$('.day>option')[i].selected=true;
+			}
+		}
+
+		// 兴趣爱好
+		var str='<%= title[0].inf_hobby %>'
+		var arr=str.split(",")  //字符串转化为数组
+		$('input[name="inf_hobby"]').checked=false;
+		for(i=0;i<arr.length;i++){
+			if(arr[i]=='sing'){
+				$('input[name="inf_hobby"]')[0].checked=true;
+			}else if(arr[i]=='sport'){
+				$('input[name="inf_hobby"]')[1].checked=true;
+			}else if(arr[i]=='travel'){
+				$('input[name="inf_hobby"]')[2].checked=true;
+			}else{
+				$('input[name="inf_hobby"]')[3].checked=true;
+			}
+		}
+		
+	</script>
+</body>
+</html>
+
+

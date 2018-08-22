@@ -1,0 +1,102 @@
+/* section */
+section{
+	margin: 20px auto;
+}
+section .container{
+
+}
+section .left{
+	width: 70%;
+	background: white;
+	float: left;
+	font-size: 14px;
+}
+section .left form{
+	padding: 0px 20px 50px;
+}
+section .left h2{
+	font-size: 18px;
+	font-weight: bold;
+	color: #00a7eb;
+	line-height: 35px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	border-bottom: 2px dotted #9da8be;
+}
+section .left input{
+	width: 40%;
+	height: 25px;
+	margin-bottom: 20px;
+	color: #242424;
+	padding-left: 5px;
+}
+section .left input.name{
+	color: red;
+	font-weight: bold;
+	border: none;
+}
+section .left input.rad,section .left input.hob{
+	width: 15px;
+	height: 15px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+section .left input.hob{
+	margin-left: 0px;
+}
+section .left input.pic{
+	width: 150px;
+	height: 120px;
+	margin-left: 45px;
+}
+section .left select#date{
+	width: 80px;
+	margin-bottom: 20px;
+}
+section .left textarea{
+	width: 40%;
+	padding: 5px;
+}
+section .left .sure{
+	width: 80px;
+	height: 30px;
+	background: #3a6ab5;
+	color: white;
+	font-weight: bold;
+	border: none;
+	margin-top: 20px;
+	float: right;
+	right: 20px;
+}
+section .con_r{
+	width: 28%;
+	margin-left: 2%;
+	float: left;
+	margin-top: 0px;
+}
+@media (max-width: 991px){
+	section .left{
+		width: 100%;
+	}
+	section .con_r{
+		width: 0%;
+	}
+	footer{
+		height: 50px;
+		line-height: 50px;
+	}
+}
+
+
+@media (max-width: 668px) {
+	section{
+		margin-top: 10px;
+	}
+	section .container{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	section .left h2{
+		margin-top: 10px;
+	}
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>register注册</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/icon/font_jezzfux8d7/iconfont.css">
+	<link rel="stylesheet" href="/stylesheets/register.css">
+	<style></style>
+</head>
+<body>
+	<form class="box" method="post">
+		<h2>Register</h2>
+		<div class="top">
+			<span><i class="iconfont icon-people"></i></span>
+			<input type="text" placeholder="用户名" name="username" onfocus="set()">
+		</div>
+		<div class="tips1">
+			<p>*用户名不能为空</p>
+		</div>
+		<div class="tips2">
+			<p>*用户名已存在</p>
+		</div>
+		<div class="bottom">
+			<span><i class="iconfont icon-password"></i></span>
+			<input type="password" placeholder="密码" name="password" onfocus="set()">
+		</div>
+		<div class="tips3">
+			<p>*密码不能为空</p>
+		</div>
+		<div class="register">
+			<span class="span1">注册</span>
+			<span class="span2">返回</span>
+		</div>
+		<div class="tips4">
+			<p>*注册成功</p>
+		</div>
+	</form>
+
+	<script src="/javascripts/jquery.min.js"></script>
+	<script>
+		$('.box .register .span1').click(function(event) {
+			if($('.box .top input').val()==''){
+				$('.box .tips1').show();
+			}else if($('.box .bottom input').val()==''){
+				$('.box .tips3').show();
+			}else{
+				$.ajax({
+					url:'/register',
+					method:'post',
+					data:$('.box').serialize(),
+					dataType:'json',
+					success:function(res){
+						if(res.length>0){
+							$('.box .tips2').show();
+						}else{
+							$('.box .tips4').show();
+							location.href='http://localhost:3000/';
+						}
+					}
+				})
+			}
+		});
+		$('.box .register .span2').click(function(event) {
+			location.href='http://localhost:3000/';
+		});
+		function set(){
+			$('.box .tips1,.box .tips2,.box .tips3,.box .tips4').hide();
+		}
+	</script>
+</body>
+</html>

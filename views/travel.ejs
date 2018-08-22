@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>travel旅行路上</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" href="/icon/font_1v3os0m7046/iconfont.css">
+	<link rel="stylesheet" href="/stylesheets/travel.css">
+	<style></style>
+</head>
+<body>
+	<!-- nav -->
+	<nav>
+		<div class="container">
+			<div class="pull-left nav_l col-md-3 col-sm-6">
+				<h1>onerSunny博客</h1>
+			</div>
+			<div class="nav_r col-md-2 col-sm-6">
+				<div class="nav_r2">
+					<span class="span1"></span>
+					<span class="span2"></span>
+					<span class="span3"></span>
+				</div>
+				<div class="nav_r1">
+					<span>
+                        <i class="iconfont icon-login"></i>
+                        <a href="/showLogin">登录</a>
+                    </span>
+                    <span>
+                        <i class="iconfont icon-register_"></i>
+                        <a href="/showRegister">注册</a>
+                    </span>
+				</div>
+			</div>
+			<div class="nav_c col-md-7 col-sm-12">
+				<ul>
+					<li><a href="/">首页</a></li>
+					<li>学无止境</li>
+					<li class="current">
+						<a href="/life">慢生活</a>
+					</li>
+					<li>
+						<a href="/about_me">关于我</a>
+					</li>
+					<li>
+						<a href="/article">发表文章</a>
+					</li>
+					<li>
+						<a href="/message_board">留言板</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- content -->
+	<div class="content">
+		<div class="container">
+			<div class="left">
+				<div class="l_top">
+					<ul>
+						<% for(i=0;i<3;i++) { %>
+							<li class="li1">
+								<h2><i class="iconfont icon-tengxunweibo"></i></h2>
+								<h3><%= title[i].title1 %></h3>
+								<p>
+									<% for(j=0;j<2;j++) { %>
+										<i class="iconfont icon-zhengque"></i><%= title[i].con1[j] %>
+										<br>
+									<% } %>
+								</p>
+							</li>
+						<% } %>
+					</ul>
+				</div>
+				
+				<div class="l_pic">
+					<h2>我的云南之旅~~~</h2>
+					<img src="../images/travel-01.jpg" alt="">
+				</div>
+
+				<!-- l_cons 1 -->
+				<% for(i=3;i<5;i++) { %>
+					<div class="l_cons">
+						<h2><%= title[i].title2 %></h2>
+						<div class="cons">
+							<div class="cons_l">
+								<img src="<%= title[i].pic2 %>" alt="">
+							</div>
+							<div class="range">
+								<% for(j=0;j<4;j++) { %>
+									<p class="title"><%= title[i].con2[j] %></p>
+								<% } %>
+							</div>
+						</div>
+					</div>
+				<% } %>
+
+				<!-- l_con 1 -->
+				<% for(i=5;i<8;i++) { %>
+					<div class="l_con">
+						<p>
+							<i class="iconfont icon-shuqian"></i>
+							<%= title[i].con3 %></p>
+						<ul>
+							<% for(j=0;j<3;j++) { %>
+								<li>
+									<img src="<%= title[i].pic3[j] %>" alt="">
+									<div class="li_b">
+										<p><%= title[i].p3[j] %></p>
+									</div>
+								</li>
+							<% } %>
+						</ul>
+					</div>
+				<% } %>
+			</div>
+
+			<!-- right -->
+			<div class="right">
+				<!-- r_con 1 -->
+				<% for(i=8;i<10;i++) { %>
+				<div class="r_con">
+					<h2><%= title[i].title4 %></h2>
+					<ul>
+						<% for(j=0;j<5;j++) { %>
+						<li>
+							<img src="<%= title[i].pic4[j] %>" alt="">
+							<span><%= title[i].span4[j] %></span>
+						</li>
+						<% } %>
+					</ul>
+				</div>
+				<% } %>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<footer>
+		<p>Design by 
+			<span>onerSunny个人微博</span>
+			<span>粤ICP备11002363号-1</span>
+		</p>
+	</footer>
+
+	<script src='/javascripts/jquery.min.js'></script>
+	<script src='/javascripts/bootstrap.min.js'></script>
+	<script src='/javascripts/travel.js'></script>
+</body>
+</html>
